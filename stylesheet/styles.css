@@ -9,6 +9,7 @@ box-sizing: border-box;
 font-size: 14px;
 font-family: "Arial";
 line-height: 15px;
+background-color: white;
 }
 
 header[role="banner"]       { grid-area: header; }
@@ -16,19 +17,15 @@ main[role="main"]            { grid-area: main; }
 div[role="complementary"]   { grid-area: sidebar; }
 footer[role="contentinfo"]  { grid-area: footer; }
 
-.grid,
-.subgrid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-}
-
 .grid {
+  display: grid;
   grid-auto-rows: min-content;
   grid-template-areas:
   "header"
   "sidebar"
   "main"
   "footer";
+  grid-template-columns: minmax(0, 1fr);
   width: 100%;
   gap: 25px;
   margin:0;
@@ -43,11 +40,6 @@ header{
   grid-template-columns:13% 28% 50%;
   justify-content: space-between;
 }
-
-header[role="banner"] {
-  background-color: white;
-}
-
 .logo{
   min-width: 80px;
   max-width: 120px;
@@ -56,7 +48,7 @@ header[role="banner"] {
   margin-bottom: 2%;
 }
 
-.contact{
+.navbar{
   max-width: 520px;
   max-width: 300px;
   height: 110px;
@@ -64,7 +56,7 @@ header[role="banner"] {
   margin-bottom: 2%;
 }
 
-.more{
+.contact{
   padding: 0 25px 0 0;
   display: flex;
   flex-direction: column;
@@ -74,13 +66,13 @@ header[role="banner"] {
   background-color: grey;
 }
 
-.more > p{
+.contact > p{
   margin: 0 0 0 0;
   padding:15px 0 0 0;
   color: white;
 }
 
-.left-content{
+.sidebar-content{
   background-color: grey;
   color: white;
   padding: 30px 10px 40px 20px;
@@ -92,15 +84,17 @@ header[role="banner"] {
 }
 
 .subgrid {
+  display:grid;
+  grid-template-columns: minmax(0, 1fr);
   padding-top: 20px;
   grid-gap: 20px;
 }
-.panel {
+.subgrid-panel {
   background-color: #dcdcdc;
   padding: 20px 20px 20px 20px;
 }
 
-.block-grid{
+.main-grid{
   margin-top:20px;
   max-width: 900px;
   display: grid;
