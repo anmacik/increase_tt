@@ -4,18 +4,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
 </head>
-<body class="grid">
+<body>
   <header role="banner">
-    <div class="logo"></div>
-    <nav class="navbar"></nav>
-    <div class="contact">
-      <p><a href="tel:+375293711041">+375 (29) 371-10-41</a></p>
-      <p><a href = "mailto:info@increase.by">info@increase.by</a></p>
-      <p><a href = "www.increase.by">www.increase.by</a></p>
+    <div class="header__logo"></div>
+    <nav class="header__navbar"></nav>
+    <div class="header__contact">
+      <p><a href="tel:+375293711041" id="tel">+375 (29) 371-10-41</a></p>
+      <p><a href="mailto:info@increase.by" id="mailto">info@increase.by</a></p>
+      <p><a href="www.increase.by" id="site">www.increase.by</a></p>
     </div>
   </header>
   <div class="sidebar" role="complementary">
-      <div class='sidebar-content'>
+      <div class='sidebar__content'>
       <h1>Создание сайтов</h1>
       <p>Изготовление сайтов «под ключ»
       Как мы работаем
@@ -31,7 +31,7 @@
     </div>
   </div>
   <main role="main">
-    <div class="main-text">
+    <div class="main__text">
         <h1>PSD файл с макетом. Макет разбит по слоям и сгрупированн по папкам:</h1>
         <ul>
           <li>  <b>number</b> - нумерация блоков (номера блоков верстать не нужно)</li>
@@ -39,22 +39,22 @@
           <li>  <b>head</b> - шапка сайта</li>
           <li>  <b>content</b> - контентная область, которая в свою очередь делится на left  и center</li>
         </ul>
-        Текстовое описание задания и требования.
-      </div>
-      <div class="main-grid">
-        <div class="empty-block"></div>
-        <div class="empty-block"></div>
-        <div class="empty-block"></div>
-        <div class="empty-block"></div>
-        <div class="empty-block"></div>
-        <div class="empty-block"></div>
-        <div class="empty-block"></div>
+        <p>Текстовое описание задания и требования.</p>
+    </div>
+      <div class="blocks-grid">
+        <div class="blocks-grid__empty-block"></div>
+        <div class="blocks-grid__empty-block"></div>
+        <div class="blocks-grid__empty-block"></div>
+        <div class="blocks-grid__empty-block"></div>
+        <div class="blocks-grid__empty-block"></div>
+        <div class="blocks-grid__empty-block"></div>
+        <div class="blocks-grid__empty-block"></div>
       </div>
       <div class="subgrid">
-          <div class="subgrid-panel">
+          <div class="subgrid__panel">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
           </div>
-          <div class="subgrid-panel">
+          <div class="subgrid__panel">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
           </div>
       </div>
@@ -63,7 +63,7 @@
     </div>
   </main>
     <footer role="contentinfo">
-      <div class="footer-box1">
+      <div class="footer__box1">
         <ul>
           <li>Пункт 01</li>
           <li>Пункт 02</li>
@@ -81,7 +81,7 @@
           <li>Пункт 14</li>
         </ul>
       </div>
-      <div class="footer-box2">
+      <div class="footer__box2">
         <ul>
           <li><a href="https://increase.by/services/seo/">Поисковое продвижение сайта</a></li>
           <li><a href="https://increase.by/services/new">Тариф "Новый"</a></li>
@@ -93,8 +93,8 @@
           <li><a href="https://increase.by/services/new">Тариф "Новый"</a></li>
         </ul>
       </div>
-      <div class="footer-box"></div>
-      <div class="footer-box"></div>
+      <div class="footer__box"></div>
+      <div class="footer__box"></div>
     </footer>
 </body>
 </html>
