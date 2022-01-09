@@ -1,23 +1,23 @@
 *{
   text-size-adjust: none;
+  font-size: 14px;
+  font-family: "Arial";
+  line-height: 22px;
 }
 
 html{
 margin-left: 5%;
 margin-right: 5%;
 box-sizing: border-box;
-font-size: 14px;
-font-family: "Arial";
-line-height: 15px;
 background-color: white;
 }
 
-header[role="banner"]       { grid-area: header; }
-main[role="main"]            { grid-area: main; }
+header      				{ grid-area: header; }
+main						{ grid-area: main; }
 div[role="complementary"]   { grid-area: sidebar; }
-footer[role="contentinfo"]  { grid-area: footer; }
-
-.grid {
+footer 		 				{ grid-area: footer; }
+	
+body {
   display: grid;
   grid-auto-rows: min-content;
   grid-template-areas:
@@ -32,55 +32,83 @@ footer[role="contentinfo"]  { grid-area: footer; }
 }
 
 header{
-  margin-top:30px;
+  display: grid; 
+  grid-template-columns:13% 28% 50%;
   height: 130px;
   width: 100%;
-  display: grid;
+  margin-top:30px;
+  justify-content: space-between;  
+  
   border-bottom: 1px solid grey;
-  grid-template-columns:13% 28% 50%;
-  justify-content: space-between;
-}
-.logo{
-  min-width: 80px;
-  max-width: 120px;
-  height: 110px;
-  background-color: grey;
-  margin-bottom: 2%;
 }
 
-.navbar{
+footer {	
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-column-gap: 20px;
+  grid-row-gap:20px;  
+  width: 100%;  
+  padding-top:20px;
+  margin-bottom:20px;  
+  
+  border-top: 1px solid grey;
+}
+
+a{
+  color: inherit;
+  text-decoration:none;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+p {
+  color:inherit;
+}
+
+.header__logo{
+  height: 110px;
+  margin-bottom: 2%;
+  
+  background-color: grey;
+}
+
+.header__navbar{
   max-width: 520px;
-  max-width: 300px;
   height: 110px;
-  background-color: grey;
   margin-bottom: 2%;
+  background-color: grey;
 }
 
-.contact{
-  padding: 0 25px 0 0;
+.header__contact{
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
+  justify-content: center;  
   align-items: flex-end;
-  justify-content: center;
   height: 110px;
+  padding: 0 25px 0 0;
+  
   background-color: grey;
 }
 
 .contact > p{
   margin: 0 0 0 0;
-  padding:15px 0 0 0;
+  
   color: white;
 }
 
-.sidebar-content{
+.sidebar__content{	
+  padding: 30px 10px 40px 20px;
+  
   background-color: grey;
   color: white;
-  padding: 30px 10px 40px 20px;
 }
 
-.main-text{
-  background-color: #dcdcdc;
+.main__text{
   padding: 20px 0 20px 20px;
+  
+  background-color: #dcdcdc;
 }
 
 .subgrid {
@@ -89,88 +117,72 @@ header{
   padding-top: 20px;
   grid-gap: 20px;
 }
-.subgrid-panel {
+.subgrid__panel {
+  padding: 20px 20px 20px 20px;  
+  
   background-color: #dcdcdc;
-  padding: 20px 20px 20px 20px;
 }
 
-.main-grid{
-  margin-top:20px;
-  max-width: 900px;
+.blocks-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap:20px;
+  margin-top:20px;
+  max-width: 900px;
 }
 
-.empty-block{
+.blocks-grid__empty-block{
   height: 100px;
+  
   background-color: #dcdcdc;
 }
 
-h1 {
-  font-size: 1rem;
-}
 
-a {
-  color: inherit;
-}
-
-p {
-  color:inherit;
-}
-
-footer {
-  display: grid;
-  width: 100%;
-  border-top: 1px solid grey;
-  grid-column-gap: 20px;
-  grid-row-gap:20px;
-  grid-template-columns: repeat(3,1fr);
-  grid-auto-rows: 100px;
-  padding-top:20px;
-}
-
-.footer-box1{
+.footer__box1{
   display: flex;
   height:inherit;
   padding-left: 30px;
-  background-color: gray;
   grid-row-start:1;
   grid-row-end: 3;
-  padding:20px 15px 20px 15px;
-  line-height: 15px;
+  padding:20px 15px 20px 15px;  
+  
+  background-color: gray;
 }
 
-.footer-box1 > ul{
-  padding-inline-start: 0;
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  color:white;
-  list-style: none;
+.footer__box1 > ul{	
   display: inline-block;
+  padding-inline-start: 0;
+  columns: 2;  
   width: 100%;
   margin: 0;
+  
+  color:white;
+  
+  list-style: none;
 }
 
-.footer-box2{
-  height: inherit;
-  padding-left: 30px;
-  background-color: gray;
+.footer__box2{	
   grid-row-start:1;
   grid-row-end: 3;
-}
-
-.footer-box2 >ul{
- padding-inline-start: 0;
- color:white;
- list-style: square outside;
-}
-
-.footer-box{
+  height: inherit;
+  padding-left: 30px;
+  
   background-color: gray;
 }
 
+.footer__box2 >ul{
+ padding-inline-start: 0;
+ list-style: square outside;
+ 
+ color:white;
+}
+
+.footer__box{
+  background-color: gray;
+}
+#mailto,#site{
+  text-decoration:underline;
+}
 
 @media all and (min-width: 576px) {
 .subgrid {
@@ -178,7 +190,7 @@ footer {
 }
 }
 @media all and (min-width: 992px) {
-.grid {
+body {
   grid-template-areas:
     'header header header'
     'sidebar main main'
